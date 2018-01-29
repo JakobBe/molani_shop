@@ -1,10 +1,14 @@
 puts "Seeding starts"
 
-names = ["Krawatte", "Schal", "Hosenträger", "Einstecktuch", "Socken", "Fliege", "Gürtel", "Manschettenknöpfe"]
+names = ["Krawatte", "Schal", "Hosentraeger", "Einstecktuch", "Socken", "Fliege", "Guertel", "Manschettenknoepfe"]
 Item.destroy_all
 
-10.times do
-  Item.create(name: names.sample, price: rand(20..400))
+names.each do
+  i = 1
+  4.times do
+    Item.create(name: "#{names.sample}#{i}", price: rand(20..400))
+    i += 1
+  end
 end
 
 puts "Seeding done"
