@@ -2,7 +2,8 @@
 <ul>
   <% @items.each do |item|%>
   <li>
-    <%= "#{item.name} für #{item.price}€" %>
+    <%= link_to item.name, item_path(item)%>
+    <%= "für #{item.price}€" %>
   </li>
   <% end %>
 </ul>
