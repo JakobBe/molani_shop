@@ -1,3 +1,10 @@
-<h1><%= @item.name %></h1>
-<%= image_tag "#{@item.name}"%>
+<div class="show-grid">
+  <% 3.times do %>
+    <div class="card-new col-xs-12 col-sm-6 col-md-3">
+      <h1><%= @item.name %></h1>
+      <%= image_tag "#{@item.name}", class:"img-card"%>
+    </div>
+  <% end  %>
+</div>
+
 
