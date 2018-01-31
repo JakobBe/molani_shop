@@ -1,18 +1,22 @@
-<div class="navbar-wagon">
+<div class="navbar-molani">
+
+  <%= link_to "Krawatten", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Einstecktücher", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Hosenträger", "#", class: "navbar-wagon-item navbar-wagon-link" %>
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-molani-brand" do %>
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
+  <%= link_to "Socken", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Schals", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Fliegen", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+
+
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-      <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

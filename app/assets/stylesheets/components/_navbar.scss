@@ -1,25 +1,27 @@
 /* Main navbar */
-.navbar-wagon {
+.navbar-molani {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: space-between;
+  color: $blue;
 }
 
 /* Logo */
 .navbar-molani-brand img {
-  display: center;
   height: 50px;
   background: $blue;
   border-radius: 5px;
+  top: 15%;
+  right: 48%;
 }
 
 /* User Avatar */
-.navbar-wagon .avatar {
+.navbar-molani .avatar {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -40,11 +42,11 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: $blue;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: $red;
   text-decoration: none;
 }
 
