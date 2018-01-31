@@ -9,4 +9,14 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def category
+    @items = Item.where(category: params[:category])
+  end
+
+  private
+
+  def flat_params
+    params.require(:category).permit(:category)
+  end
+
 end

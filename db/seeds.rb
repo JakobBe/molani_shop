@@ -6,7 +6,7 @@ Item.destroy_all
 names.each do |name|
   i = 1
   4.times do
-    Item.create(name: "#{name}#{i}", price: rand(20..400))
+    Item.create(name: "#{name}#{i}", price: rand(20..400), category: name)
     i += 1
   end
 end

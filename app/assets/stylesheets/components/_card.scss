@@ -6,26 +6,28 @@
   margin: 10px;
 }
 
-.card-img {
-  background-size: cover !important;
-  background-position: center;
-  height: 70%;
-  border-radius: 2px;
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-}
-
 .card-description {
   text-align: center;
   bottom: 10px;
   left: 10px;
   grid-row: 2 / span 1;
   grid-column: 1 / span 1;
+  margin: 0px;
+}
+
+.card-img {
+  background-size: cover !important;
+  background-position: center;
+  height: 100%;
+  border-radius: 2px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
 }
 
 .card-description h2 {
   font-size: 24px;
   color: white;
+  margin: 0px;
 }
 
 .card-description p {
