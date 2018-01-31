@@ -6,7 +6,7 @@
   height: 70px;
   padding: 0px 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   color: $blue;
 }
@@ -16,8 +16,6 @@
   height: 50px;
   background: $blue;
   border-radius: 5px;
-  top: 15%;
-  right: 48%;
   &:hover {
     text-decoration: none;
     background: $red;
@@ -61,6 +59,9 @@
   text-decoration: none;
 }
 
+.navbar-icons {
+  display: -webkit-inline-box;
+}
 /* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;

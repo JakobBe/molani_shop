@@ -1,45 +1,39 @@
 <div class="navbar-molani">
-
-  <!-- Navigation on big screen-->
-  <div class="hidden-xs hidden-sm">
-    <%= link_to "Krawatten", category_items_path(:category => "Krawatte"), class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Einstecktücher", category_items_path(:category => "Einstecktuch"), class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Hosenträger", category_items_path(:category => "Hosentraeger"), class: "navbar-molani-item navbar-molani-link" %>
-    <!-- Logo -->
-    <%= link_to root_path, class: "navbar-molani-brand" do %>
+      <!-- Logo -->
+  <%= link_to root_path, class: "navbar-molani-brand" do %>
       <%= image_tag "logo.png", height: 50 %>
     <% end %>
-    <%= link_to "Socken", category_items_path(:category => "Socken"), class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Schals", category_items_path(:category => "Schal"), class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Fliegen", category_items_path(:category => "Fliege"), class: "navbar-molani-item navbar-molani-link" %>
-  </div>
-
-  <div class="navbar-molani-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Krawatten</a></li>
-        <li><a href="#">Einstecktücher</a></li>
-        <li><a href="#">Hosenträger</a></li>
-        <li><a href="#">Socken</a></li>
-        <li><a href="#">Schals</a></li>
-        <li><a href="#">Fliegen</a></li>
-      </ul>
+    <!-- Navigation on big screen-->
+    <div class="navbar-categories hidden-xs hidden-sm">
+      <%= link_to "Krawatten", category_items_path(:category => "Krawatte"), class: "navbar-molani-item navbar-molani-link" %>
+      <%= link_to "Einstecktücher", category_items_path(:category => "Einstecktuch"), class: "navbar-molani-item navbar-molani-link" %>
+      <%= link_to "Hosenträger", category_items_path(:category => "Hosentraeger"), class: "navbar-molani-item navbar-molani-link" %>
+      <%= link_to "Socken", category_items_path(:category => "Socken"), class: "navbar-molani-item navbar-molani-link" %>
+      <%= link_to "Schals", category_items_path(:category => "Schal"), class: "navbar-molani-item navbar-molani-link" %>
+      <%= link_to "Fliegen", category_items_path(:category => "Fliege"), class: "navbar-molani-item navbar-molani-link" %>
     </div>
+    <!-- Navigation on small screen, turning into dropdown-->
+  <div class="navbar-molani hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle navbar-molani-item" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to "Krawatten", category_items_path(:category => "Krawatte"), class: "navbar-molani-item navbar-molani-link" %></li>
+          <li><%= link_to "Einstecktücher", category_items_path(:category => "Einstecktuch"), class: "navbar-molani-item navbar-molani-link" %></li>
+          <li><%= link_to "Hosenträger", category_items_path(:category => "Hosentraeger"), class: "navbar-molani-item navbar-molani-link" %></li>
+          <li><%= link_to "Socken", category_items_path(:category => "Socken"), class: "navbar-molani-item navbar-molani-link" %></li>
+          <li><%= link_to "Schals", category_items_path(:category => "Schal"), class: "navbar-molani-item navbar-molani-link" %></li>
+          <li><%= link_to "Fliegen", category_items_path(:category => "Fliege"), class: "navbar-molani-item navbar-molani-link" %></li>
+        </ul>
+      </div>
   </div>
-</div>
 
-
-
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
+  <!-- Right Navigation with icons -->
+  <div class="navbar-icons">
+    <a href="#" class="fa fa-shopping-cart navbar-molani-item navbar-molani-link"></a>
     <% if user_signed_in? %>
-
-      <!-- Avatar with dropdown menu -->
-      <div class="navbar-molani-item">
+        <!-- Signed in dropdown menu -->
         <div class="dropdown">
-          <%= image_tag "", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <i class="fa fa-user dropdown-toggle navbar-molani-item navbar-molani-link" id="navbar-wagon-menu" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -58,13 +52,17 @@
             </li>
           </ul>
         </div>
-      </div>
-    <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% else %>
+        <!-- Login link (when logged out) -->
+        <div class="dropdown">
+          <i class="fa fa-user-o dropdown-toggle navbar-molani-item navbar-molani-link" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+            </li>
+          </ul>
+        </div>
     <% end %>
   </div>
-
-  <!-- Dropdown list appearing on mobile only -->
-
+</div>
 
