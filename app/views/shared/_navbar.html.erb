@@ -1,15 +1,33 @@
 <div class="navbar-molani">
 
-  <%= link_to "Krawatten", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Einstecktücher", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Hosenträger", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-molani-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
-  <%= link_to "Socken", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Schals", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Fliegen", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <!-- Navigation on big screen-->
+  <div class="hidden-xs hidden-sm">
+    <%= link_to "Krawatten", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Einstecktücher", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Hosenträger", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <!-- Logo -->
+    <%= link_to root_path, class: "navbar-molani-brand" do %>
+      <%= image_tag "logo.png", height: 50 %>
+    <% end %>
+    <%= link_to "Socken", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Schals", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Fliegen", "#", class: "navbar-molani-item navbar-molani-link" %>
+  </div>
+
+  <div class="navbar-molani-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li><a href="#">Krawatten</a></li>
+        <li><a href="#">Einstecktücher</a></li>
+        <li><a href="#">Hosenträger</a></li>
+        <li><a href="#">Socken</a></li>
+        <li><a href="#">Schals</a></li>
+        <li><a href="#">Fliegen</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 
@@ -19,9 +37,9 @@
     <% if user_signed_in? %>
 
       <!-- Avatar with dropdown menu -->
-      <div class="navbar-wagon-item">
+      <div class="navbar-molani-item">
         <div class="dropdown">
-          <%= image_tag "http://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+          <%= image_tag "", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
@@ -48,15 +66,5 @@
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+
 
