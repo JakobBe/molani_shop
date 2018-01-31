@@ -1,3 +1,24 @@
 .item-list {
   list-style: none;
 }
+
+.collections {
+  margin-top: 80px;
+  padding-top: 10px;
+  text-align: center;
+  color: $blue;
+  background-color: white;
+  padding-bottom: 90px;
+}
+
+.collections-imgs {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.collections-img {
+  height: 550px;
+  border: 1.5px solid $blue;
+}
