@@ -2,16 +2,16 @@
 
   <!-- Navigation on big screen-->
   <div class="hidden-xs hidden-sm">
-    <%= link_to "Krawatten", "#", class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Einstecktücher", "#", class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Hosenträger", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Krawatten", category_items_path(:category => "Krawatte"), class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Einstecktücher", category_items_path(:category => "Einstecktuch"), class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Hosenträger", category_items_path(:category => "Hosentraeger"), class: "navbar-molani-item navbar-molani-link" %>
     <!-- Logo -->
     <%= link_to root_path, class: "navbar-molani-brand" do %>
       <%= image_tag "logo.png", height: 50 %>
     <% end %>
-    <%= link_to "Socken", "#", class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Schals", "#", class: "navbar-molani-item navbar-molani-link" %>
-    <%= link_to "Fliegen", "#", class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Socken", category_items_path(:category => "Socken"), class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Schals", category_items_path(:category => "Schal"), class: "navbar-molani-item navbar-molani-link" %>
+    <%= link_to "Fliegen", category_items_path(:category => "Fliege"), class: "navbar-molani-item navbar-molani-link" %>
   </div>
 
   <div class="navbar-molani-item hidden-md hidden-lg">
