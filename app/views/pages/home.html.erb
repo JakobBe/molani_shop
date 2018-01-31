@@ -1,8 +1,23 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(177,45,34,0.3) 0%, rgba(127,15,04,0.3) 50%), url('<%= image_path "laden" %>');">
-  <div class="banner-content">
-    <h1>MOLANI</h1>
-    <p><%= link_to "Hier geht es zur Kollektion", items_path, class:"banner-link"%></p>
+<div class="homepage">
+  <div class="banner" style="background-image: url('<%= image_path "laden" %>');">
+    <div class="banner-content">
+      <h1>MOLANI</h1>
+      <p><%= link_to "questione di feeling dal 1995", items_path, class:"banner-link"%></p>
+    </div>
+  </div>
+
+
+  <div class="collections">
+    <h1>Get the look</h1>
+    <div class="collections-imgs">
+      <%= image_tag "Set4", class:"collections-img"%>
+      <%= image_tag "Set5", class:"collections-img"%>
+      <%= image_tag "Set6", class:"collections-img"%>
+    </div>
   </div>
 </div>
+
+<%= render 'shared/footer' %>
+
 
 
