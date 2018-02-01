@@ -1,5 +1,6 @@
 <div class="banner-categories" style="background-image: url('<%= image_path "Impression2" %>');">
 </div>
+<div class="categories-body">
 <div class="container">
   <div class="row">
       <% @items.each do |item|%>
@@ -9,10 +10,12 @@
             </div>
             <div class="card-description">
               <h2><%= link_to item.name, item_path(item), class:"item-title"%></h2>
-              <p>Very cool item, <%= "für #{item.price}€" %></p>
+              <p>Elegante <%= "#{item.category}" %> aus feinster Italienischer Seide</p>
+              <p><%= "#{item.price}.00€" %></p>
             </div>
           </div>
       </div>
       <% end %>
   </div>
+</div>
 </div>

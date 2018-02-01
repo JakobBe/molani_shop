@@ -2,7 +2,7 @@
   color: black;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 300px 50px;
+  grid-template-rows: 300px 70px;
   margin: 10px;
 }
 
@@ -31,9 +31,11 @@
 }
 
 .card-description p {
-  font-size: 14px;
+  font-size: 12px;
   opacity: 0.7;
-  font-weight: lighter;
+  font-weight: lighter lighter;
+  margin: 0px;
+  margin-top: 3px;
 }
 
 .item-title {

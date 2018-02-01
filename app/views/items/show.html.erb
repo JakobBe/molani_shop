@@ -1,10 +1,20 @@
-<div class="show-grid">
-  <% 3.times do %>
-    <div class="card-new col-xs-12 col-sm-6 col-md-3">
-      <h1><%= @item.name %></h1>
-      <%= image_tag "#{@item.name}", class:"img-card"%>
+<div class="container">
+  <div class="grid-show">
+    <div class="card-show">
+      <div class="card">
+        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path @item.name %>');">
+        </div>
+        <div class="card-description">
+          <%= @item.name  %>
+        </div>
+      </div>
     </div>
-  <% end  %>
+    <div class="info-show">
+      <p>Elegante <%= "#{@item.category}" %> aus feinster Italienischer Seide</p>
+      <p><%= "#{@item.price}.00€" %></p>
+    </div>
+    <div class="btn btn-primary btn-show">Add to cart</div>
+  </div>
 </div>
 
 
