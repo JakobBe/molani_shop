@@ -17,6 +17,8 @@
       <div class="dropdown">
         <i class="fa fa-bars dropdown-toggle navbar-molani-item" data-toggle="dropdown"></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#" class="navbar-molani-item navbar-molani-link"> Profile</a></li>
+          <li><a href="#" class="navbar-molani-item navbar-molani-link">Shopping Cart</a></li>
           <li><%= link_to "Krawatten", category_items_path(:category => "Krawatte"), class: "navbar-molani-item navbar-molani-link" %></li>
           <li><%= link_to "Einstecktücher", category_items_path(:category => "Einstecktuch"), class: "navbar-molani-item navbar-molani-link" %></li>
           <li><%= link_to "Hosenträger", category_items_path(:category => "Hosentraeger"), class: "navbar-molani-item navbar-molani-link" %></li>
@@ -28,7 +30,7 @@
   </div>
 
   <!-- Right Navigation with icons -->
-  <div class="navbar-icons">
+  <div class="navbar-icons hidden-sm hidden-xs">
     <a href="#" class="fa fa-shopping-cart navbar-molani-item navbar-molani-link"></a>
     <% if user_signed_in? %>
         <!-- Signed in dropdown menu -->

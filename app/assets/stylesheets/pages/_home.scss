@@ -22,4 +22,13 @@
 .collections-img {
   height: 550px;
   border-radius: 5px;
+  margin-top: 40px;
+}
+
+@media(max-width: 720px) {
+  .collections-img {
+    height: 500px;
+    border-radius: 5px;
+    margin-top: 40px;
+  }
 }
