@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'cart_items/userIndex'
+
+  post '/cart_item', to: 'cart_items#create'
+
+  delete '/cart_item', to: 'cart_items#destroy'
+
   devise_for :users
   root to: 'pages#home'
   resources :items, only: [:index, :show] do

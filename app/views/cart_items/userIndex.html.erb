@@ -1,0 +1,9 @@
+<h1>Your shopping Cart</h1>
+
+<ul>
+  <% @cart_items.each do |item| %>
+    <li> <%= "#{item.item.name} for #{item.item.price}€, #{item.item.category} "  %>
+         <%= link_to 'Delete', cart_item_path(:cart_item_id => item.id), method: :delete %>
+    </li>
+  <% end  %>
+</ul>
