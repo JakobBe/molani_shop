@@ -13,7 +13,7 @@
       <p>Elegante <%= "#{@item.category}" %> aus feinster italienischer Seide</p>
       <p><%= "#{@item.price}.00€" %></p>
     </div>
-    <div class="btn btn-primary btn-show">Add to cart</div>
+    <%= link_to 'Add to cart', cart_item_path(:item_id => @item.id), method: :post, class: "btn btn-primary btn-show" %>
   </div>
 </div>
 
