@@ -1,0 +1,8 @@
+<% if current_user.shopping_cart.items.length == 0 %>
+  <%= link_to "", cart_items_userIndex_path, class: "fa fa-shopping-cart navbar-molani-item navbar-molani-link" %>
+<% else  %>
+  <div class="shopping_cart_with_noti  navbar-molani-item navbar-molani-link">
+    <%= link_to "", cart_items_userIndex_path, class: "fa fa-shopping-cart navbar-molani-link shopping_cart_noti" %>
+    <div class="shopping_cart_count"><%= "#{current_user.shopping_cart.items.length}" %></div>
+  </div>
+<% end  %>
