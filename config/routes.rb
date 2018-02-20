@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'cart_items/userIndex'
+  get 'cart_items/user_index'
 
   post '/cart_item', to: 'cart_items#create'
 

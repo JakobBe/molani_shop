@@ -1,0 +1,17 @@
+.shopping-cart {
+  background-color: white;
+  height: 90vh;
+  border-top: 1px solid $blue;
+  padding-top: 30px;
+  ul {
+    list-style: none;
+  }
+}
+
+.remove-from-cart {
+  text-decoration: none;
+  &:hover {
+  text-decoration: none;
+  color: $red;
+  }
+}
