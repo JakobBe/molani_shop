@@ -1,0 +1,23 @@
+.shopping_cart_with_noti {
+  position: relative;
+}
+
+.shopping_cart_count {
+  position: absolute;
+    background-color: $red;
+    border-radius: 50%;
+    height: 13px;
+    width: 13px;
+    color: white;
+    top: 1px;
+    right: 12px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.shopping_cart_noti {
+  position: absolute;
+  top: 33%;
+  right: 50%;
+  z-index: 1;
+}

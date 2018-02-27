@@ -1,6 +1,10 @@
 class CartItemsController < ApplicationController
-  def userIndex
+  def user_index
     @cart_items = current_user.shopping_cart.cart_items
+    @total_price = 0
+    @cart_items.each do |item|
+      @total_price += item.item.price
+    end
   end
 
   def create
@@ -23,6 +27,6 @@ class CartItemsController < ApplicationController
   def destroy
     @cart_item = CartItem.find(params[:cart_item_id])
     @cart_item.destroy
-    redirect_to cart_items_userIndex_path
+    redirect_to cart_items_user_index_path
   end
 end
