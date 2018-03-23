@@ -52,6 +52,11 @@
                 <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
               <% end %>
             </li>
+            <li>
+              <% if current_user.admin  %>
+                <a href="/admin" class="navbar-molani-item navbar-molani-link"> Admin Page</a>
+              <% end %>
+            </li>
           </ul>
         </div>
       <% else %>
