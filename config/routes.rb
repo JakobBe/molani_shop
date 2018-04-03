@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'cart_items/user_index'
 
   post '/cart_item', to: 'cart_items#create'
