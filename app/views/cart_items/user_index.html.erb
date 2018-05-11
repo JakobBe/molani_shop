@@ -5,7 +5,7 @@
     <% if @cart_items.length > 0  %>
       <ul>
         <% @cart_items.each do |item| %>
-          <li> <%= "#{item.item.name} for #{item.item.price}€, #{item.item.category} "  %>
+          <li> <%= "#{item.item.name} for #{item.item.price}€, #{item.item.category} | Anzahl: #{item.count}"  %>
                <%= link_to '', cart_item_path(:cart_item_id => item.id), method: :delete, class: "fas fa-minus-circle remove-from-cart" %>
           </li>
         <% end  %>
