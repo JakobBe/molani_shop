@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if current_user && current_user.shopping_cart%>
   <% if current_user.shopping_cart.items.length == 0 %>
     <div class="shopping_cart_with_noti  navbar-molani-item navbar-molani-link">
       <%= link_to "", cart_items_user_index_path, class: "fa fa-shopping-cart navbar-molani-link shopping_cart_noti" %>
