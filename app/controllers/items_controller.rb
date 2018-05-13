@@ -1,3 +1,5 @@
+require "pry-byebug"
+
 class ItemsController < ApplicationController
   skip_before_action :authenticate_user!
 
@@ -12,6 +14,11 @@ class ItemsController < ApplicationController
   def category
     @items = Item.where(category: params[:category])
   end
+
+  # def self.item_in_cart
+  #   # binding.pry
+  #   CartItem.find_by(item_id: (params[:id])) ? true : false
+  # end
 
   private
 
